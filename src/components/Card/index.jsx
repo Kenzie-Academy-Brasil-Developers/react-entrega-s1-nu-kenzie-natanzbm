@@ -1,7 +1,7 @@
 import { FaTrash } from "react-icons/fa";
 import "./styles.css";
 
-const Card = ({ transaction }) => {
+const Card = ({ transaction, removeItem }) => {
   return (
     <>
       <li
@@ -20,7 +20,10 @@ const Card = ({ transaction }) => {
               currency: "BRL",
             })}
           </span>
-          <button className="CardButton">
+          <button
+            onClick={() => removeItem(transaction.id)}
+            className="CardButton"
+          >
             <FaTrash />
           </button>
         </div>

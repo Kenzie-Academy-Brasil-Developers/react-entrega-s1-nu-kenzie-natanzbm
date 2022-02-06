@@ -2,6 +2,9 @@ import Card from "../Card";
 import "./styles.css";
 
 const List = ({ listTransactions, setListTransactions }) => {
+  const removeItem = (id) =>
+    setListTransactions(listTransactions.filter((item) => item.id !== id));
+
   return (
     <section className="TransactionsCard">
       <div className="Transactions__header">
@@ -15,7 +18,7 @@ const List = ({ listTransactions, setListTransactions }) => {
       <ul className="TransactionsCard--list">
         {listTransactions.length > 0 ? (
           listTransactions.map((value, i) => (
-            <Card transaction={value} key={i} />
+            <Card transaction={value} key={i} removeItem={removeItem} />
           ))
         ) : (
           <span className="Transactions--render">

@@ -7,15 +7,15 @@ const Home = ({ Render, listTransactions, setListTransactions }) => {
   return (
     <>
       <Header Render={Render} />
+      <List
+        listTransactions={listTransactions}
+        setListTransactions={setListTransactions}
+      />
       <Form
         listTransactions={listTransactions}
         setListTransactions={setListTransactions}
       />
       <TotalMoney listTransactions={listTransactions} />
-      <List
-        listTransactions={listTransactions}
-        setListTransactions={setListTransactions}
-      />
     </>
   );
 };

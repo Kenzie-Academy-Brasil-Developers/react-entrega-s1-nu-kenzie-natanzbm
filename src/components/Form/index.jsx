@@ -6,9 +6,12 @@ const Form = ({ listTransactions, setListTransactions }) => {
   const [value, setValue] = useState("");
   const [type, setType] = useState("Entrada");
 
+  const [id, setId] = useState(1);
+
   const submit = () => {
-    let obj = { description, type, value };
+    let obj = { id, description, type, value };
     setListTransactions([...listTransactions, obj]);
+    setId(id + 1);
   };
 
   return (
