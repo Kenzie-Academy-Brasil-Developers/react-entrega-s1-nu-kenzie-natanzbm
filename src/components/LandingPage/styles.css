@@ -43,7 +43,8 @@
 }
 
 .landing__main button:hover {
-  filter: brightness(2);
+  background-color: purple;
+  border: 2px solid purple;
   cursor: pointer;
 }
 

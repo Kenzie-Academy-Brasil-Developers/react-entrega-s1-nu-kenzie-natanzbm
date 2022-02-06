@@ -1,3 +1,5 @@
+import "./styles.css";
+
 const TotalMoney = ({ listTransactions }) => {
   return (
     <div className="total">

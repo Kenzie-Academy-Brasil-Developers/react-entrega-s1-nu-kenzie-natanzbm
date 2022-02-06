@@ -1,3 +1,5 @@
+import "./styles.css";
+
 const Form = ({ listTransactions, setListTransactions }) => {
   return (
     <div className="form">

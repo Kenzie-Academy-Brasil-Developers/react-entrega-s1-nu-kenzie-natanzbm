@@ -1,11 +1,12 @@
+import "./styles.css";
 import logo from "../../img/NuKenzie.png";
 
-const Header = ({ Return }) => {
+const Header = ({ Render }) => {
   return (
     <header className="header">
       <div className="header__div">
         <img src={logo} alt="logo" />
-        <button onClick={Return}>Início</button>
+        <button onClick={Render}>Início</button>
       </div>
     </header>
   );

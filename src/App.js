@@ -1,13 +1,7 @@
 import { useState } from "react";
 import LandingPage from "./components/LandingPage";
-import Header from "./components/Header";
-import Form from "./components/Form";
-import TotalMoney from "./components/TotalMoney";
 import "./App.css";
-import "./components/LandingPage/styles.css";
-import "./components/Header/styles.css";
-import "./components/Form/styles.css";
-import "./components/TotalMoney/styles.css";
+import Home from "./components/Home";
 
 function App() {
 
@@ -21,20 +15,14 @@ function App() {
     // { description: "Compras mercado", type: "saída", value: 580 }
   ]);
 
-  const Enter = () => setIsLoggedIn(true);
-
-  const Return = () => setIsLoggedIn(false);
+  const Render = () => setIsLoggedIn(!isLoggedIn);
 
   return (
     <div className="App">
-      {isLoggedIn === true ?
-        <>
-          <Header Return={Return} />
-          <Form />
-          <TotalMoney />
-        </>
+      {isLoggedIn ?
+        <Home Render={Render} />
         :
-        <LandingPage Enter={Enter} />}
+        <LandingPage Render={Render} />}
     </div>
   );
 
