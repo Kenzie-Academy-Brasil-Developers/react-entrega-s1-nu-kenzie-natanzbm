@@ -1,0 +1,45 @@
+.TransactionsCard {
+  width: 320px;
+}
+
+.TransactionsCard--list {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 0;
+}
+
+.Transactions--render {
+  font-size: 20px;
+  color: #868e96;
+}
+
+.Transactions__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Transactions__header--span {
+  color: #212529;
+  font-weight: bold;
+}
+
+.Transactions__header--buttons {
+  margin: 10px;
+  width: 300px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.Transactions__header--buttons button {
+  width: 80px;
+  height: 30px;
+  border-radius: 8px;
+  background-color: #e9ecef;
+  border: 2px solid #e9ecef;
+  box-sizing: border-box;
+  color: #868e96;
+  font-size: 13px;
+}

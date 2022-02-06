@@ -1,0 +1,69 @@
+.CardList {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding: 10px;
+  width: 315px;
+  height: 70px;
+  background: #f8f9fa;
+  border-radius: 4px;
+}
+
+.entrada {
+  border-left: 4px solid #03b898;
+}
+
+.saida {
+  border-left: 4px solid #e9ecef;
+}
+
+.CardList--div1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.CardList--div2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.span__type {
+  color: #868e96;
+}
+
+.span__description,
+.span__value {
+  color: #212529;
+}
+
+.span__value,
+.span__type {
+  font-size: 12px;
+}
+
+.span__description {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.CardButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  margin-left: 20px;
+  background-color: #e9ecef;
+  color: #868e96;
+  border: none;
+}
+
+.CardButton:hover {
+  cursor: pointer;
+  color: red;
+}

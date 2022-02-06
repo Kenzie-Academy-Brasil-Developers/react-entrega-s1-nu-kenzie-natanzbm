@@ -7,20 +7,14 @@ function App() {
 
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-  const [listTransactions, setListTransactions] = useState([
-    // { description: "Salário recebido", type: "entrada", value: 3000 },
-    // { description: "Conta de luz", type: "saída", value: -150 },
-    // { description: "Condomínio", type: "saída", value: -100 },
-    // { description: "Freelance", type: "entrada", value: 320 },
-    // { description: "Compras mercado", type: "saída", value: 580 }
-  ]);
+  const [listTransactions, setListTransactions] = useState([]);
 
   const Render = () => setIsLoggedIn(!isLoggedIn);
 
   return (
     <div className="App">
       {isLoggedIn ?
-        <Home Render={Render} />
+        <Home Render={Render} listTransactions={listTransactions} setListTransactions={setListTransactions} />
         :
         <LandingPage Render={Render} />}
     </div>
