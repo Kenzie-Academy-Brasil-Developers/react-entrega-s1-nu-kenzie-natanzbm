@@ -25,6 +25,7 @@ const Home = ({
         <Form
           listTransactions={listTransactions}
           setListTransactions={setListTransactions}
+          filterTransactions={filterTransactions}
         />
       </main>
     </>
