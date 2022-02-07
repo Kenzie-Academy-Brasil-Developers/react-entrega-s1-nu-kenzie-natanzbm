@@ -3,19 +3,34 @@ import Header from "../Header";
 import TotalMoney from "../TotalMoney";
 import List from "../List";
 
-const Home = ({ Render, listTransactions, setListTransactions }) => {
+const Home = ({
+  Render,
+  listTransactions,
+  setListTransactions,
+  filterTransactions,
+  setFilterTransactions,
+}) => {
   return (
     <>
       <Header Render={Render} />
       <List
         listTransactions={listTransactions}
         setListTransactions={setListTransactions}
+        filterTransactions={filterTransactions}
+        setFilterTransactions={setFilterTransactions}
       />
       <Form
         listTransactions={listTransactions}
         setListTransactions={setListTransactions}
       />
-      <TotalMoney listTransactions={listTransactions} />
+      {listTransactions.length > 0 ? (
+        <TotalMoney
+          listTransactions={listTransactions}
+          filterTransactions={filterTransactions}
+        />
+      ) : (
+        <></>
+      )}
     </>
   );
 };

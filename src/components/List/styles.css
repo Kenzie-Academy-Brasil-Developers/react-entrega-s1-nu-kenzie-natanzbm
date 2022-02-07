@@ -42,8 +42,20 @@
   height: 30px;
   border-radius: 8px;
   background-color: #e9ecef;
-  border: 2px solid #e9ecef;
+  border: 1.4px solid #e9ecef;
   box-sizing: border-box;
   color: #868e96;
   font-size: 13px;
+  font-weight: bold;
+}
+
+.Transactions__header--buttons button:hover {
+  cursor: pointer;
+  background-color: gray;
+  color: white;
+}
+
+.Transactions__header--buttons button:focus {
+  background-color: #fd377e;
+  color: white;
 }
