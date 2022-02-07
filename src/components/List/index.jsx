@@ -36,12 +36,12 @@ const List = ({
               <Card transaction={value} key={i} removeItem={removeItem} />
             ))
         ) : (
-          <>
+          <div className="TransactionsCard--header">
             <span className="Transactions--render">
               Você ainda não possui nenhum lançamento
             </span>
             <img className="NoCard" src={empty} alt="nocard" />
-          </>
+          </div>
         )}
       </ul>
     </section>
