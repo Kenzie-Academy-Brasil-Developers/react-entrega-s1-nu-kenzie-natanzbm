@@ -9,5 +9,10 @@ button {
   align-items: center;
   max-width: 320px;
   height: 100%;
-  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .App {
+    max-width: 100%;
+  }
 }

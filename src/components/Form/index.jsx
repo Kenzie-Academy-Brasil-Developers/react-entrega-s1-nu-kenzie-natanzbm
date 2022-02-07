@@ -1,7 +1,12 @@
 import "./styles.css";
 import { useState } from "react";
+import TotalMoney from "../TotalMoney";
 
-const Form = ({ listTransactions, setListTransactions }) => {
+const Form = ({
+  listTransactions,
+  setListTransactions,
+  filterTransactions,
+}) => {
   const [description, setDescription] = useState("");
   const [value, setValue] = useState("");
   const [type, setType] = useState("Entrada");
@@ -15,41 +20,53 @@ const Form = ({ listTransactions, setListTransactions }) => {
   };
 
   return (
-    <form className="form" onSubmit={(event) => event.preventDefault()}>
-      <div className="form__div1">
-        <label className="form__label">Descrição</label>
-        <input
-          type="text"
-          value={description}
-          placeholder="Digite aqui sua descrição"
-          onChange={(event) => setDescription(event.target.value)}
-        />
-        <span className="form__example">Ex: Compra de roupas</span>
-      </div>
-      <div className="form__div2">
-        <div className="form__div2--value">
-          <label className="form__label">Valor</label>
+    <section className="form__section">
+      <form className="form" onSubmit={(event) => event.preventDefault()}>
+        <div className="form__div1">
+          <label className="form__label">Descrição</label>
           <input
-            type="number"
-            value={value}
-            placeholder="1            R$"
-            onChange={(event) => setValue(event.target.value)}
+            type="text"
+            value={description}
+            placeholder="Digite aqui sua descrição"
+            onChange={(event) => setDescription(event.target.value)}
           />
+          <span className="form__example">Ex: Compra de roupas</span>
         </div>
-        <div className="form__div2--type">
-          <label className="form__label">Tipo de valor</label>
-          <select
-            className="form__select"
-            value={type}
-            onChange={(event) => setType(event.target.value)}
-          >
-            <option value="Entrada">Entrada</option>
-            <option value="Saída">Saída</option>
-          </select>
+        <div className="form__div2">
+          <div className="form__div2--value">
+            <label className="form__label">Valor</label>
+            <input
+              type="number"
+              value={value}
+              placeholder="1            R$"
+              onChange={(event) => setValue(event.target.value)}
+            />
+          </div>
+          <div className="form__div2--type">
+            <label className="form__label">Tipo de valor</label>
+            <select
+              className="form__select"
+              value={type}
+              onChange={(event) => setType(event.target.value)}
+            >
+              <option value="Entrada">Entrada</option>
+              <option value="Saída">Saída</option>
+            </select>
+          </div>
         </div>
-      </div>
-      <button onClick={submit}>Inserir valor</button>
-    </form>
+        <button onClick={submit}>Inserir valor</button>
+      </form>
+      <>
+        {listTransactions.length > 0 ? (
+          <TotalMoney
+            listTransactions={listTransactions}
+            filterTransactions={filterTransactions}
+          />
+        ) : (
+          <></>
+        )}
+      </>
+    </section>
   );
 };
 

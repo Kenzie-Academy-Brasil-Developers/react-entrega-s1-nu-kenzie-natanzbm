@@ -59,3 +59,32 @@
   background-color: #fd377e;
   color: white;
 }
+
+@media screen and (min-width: 768px) {
+  .TransactionsCard {
+    width: 600px;
+  }
+
+  .Transactions__header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .Transactions__header--buttons {
+    margin-right: 0;
+  }
+
+  .TransactionsCard--list {
+    width: 100%;
+    height: 400px;
+  }
+
+  .Transactions--render {
+    margin-top: 0;
+    text-align: left;
+  }
+
+  .NoCard {
+    margin-top: 15px;
+  }
+}

@@ -1,5 +1,6 @@
 import Card from "../Card";
 import "./styles.css";
+import empty from "../../img/NoCard.png";
 
 const List = ({
   listTransactions,
@@ -35,9 +36,12 @@ const List = ({
               <Card transaction={value} key={i} removeItem={removeItem} />
             ))
         ) : (
-          <span className="Transactions--render">
-            Você ainda não possui nenhum lançamento
-          </span>
+          <>
+            <span className="Transactions--render">
+              Você ainda não possui nenhum lançamento
+            </span>
+            <img className="NoCard" src={empty} alt="nocard" />
+          </>
         )}
       </ul>
     </section>
