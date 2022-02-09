@@ -15,6 +15,9 @@ const Form = ({
 
   const submit = () => {
     let obj = { id, description, type, value };
+
+    obj.value = obj.type === "Saída" ? obj.value * -1 : Number(obj.value);
+
     setListTransactions([...listTransactions, obj]);
     setId(id + 1);
   };
