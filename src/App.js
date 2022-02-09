@@ -1,7 +1,7 @@
 import { useState } from "react";
 import LandingPage from "./components/LandingPage";
-import "./App.css";
 import Home from "./components/Home";
+import "./App.css";
 
 function App() {
 
