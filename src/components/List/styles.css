@@ -67,7 +67,7 @@
 
 @media screen and (min-width: 768px) {
   .TransactionsCard {
-    width: 600px;
+    width: 70%;
   }
 
   .Transactions__header {
@@ -91,6 +91,6 @@
   .NoCard {
     margin-top: 15px;
     display: inherit;
-    width: 100%;
+    width: 95%;
   }
 }
